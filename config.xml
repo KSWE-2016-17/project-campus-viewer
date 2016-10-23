@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.kswe.arviewer" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>AR-Viewer</name>
+    <description>An AR Viewer application for the KSWE project</description>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-navigation href="https://kschima.github.io/project-campus/" />
+    <allow-navigation href="https://cemizm.github.io/project-campus/" />
+    <plugin name="cordova-plugin-camera-preview" spec="https://github.com/westonganger/cordova-plugin-camera-preview.git" />
+    <plugin name="cordova-plugin-whitelist" spec="~1.3.0" />
+    <plugin name="cordova-plugin-geolocation" spec="~2.4.0" />
+    <engine name="android" spec="~5.2.2" />
+    <engine name="ios" spec="~4.2.1" />
+    <plugin name="cordova-plugin-inappbrowser" spec="https://github.com/KSWE-2016-17/cordova-plugin-inappbrowser.git" />
+</widget>
