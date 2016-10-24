@@ -1,5 +1,4 @@
 # project-campus-viewer
-=======================
 
 basic AR Viewer app based on the Cordova framework, to render an AR Webapp on top of a native device camera feed
 
@@ -10,8 +9,23 @@ cordova prepare
 ```
 
 ## Android
-Make sure the following SDK prerequisites are installed
 
+### SDK prerequisites
+
+#### Android Command Line Tools
+Android Studio includes all the tools you need to build apps for Android. If you do not need Android Studio, you can download the basic Android command line tools too.
+
+https://developer.android.com/studio/index.html#downloads
+
+Add the path to command line tools to your Environment path.
+
+#### Install Platform(s)
+Run Android SDK Manager in command line
+```
+android
+```
+
+Download following Platform SDKs
 * Android Platform SDK 23
 * Android SDK build-tools (latest)
 * Android Support Repository (latest)
