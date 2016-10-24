@@ -10,6 +10,11 @@ cordova prepare
 ```
 
 ## Android
+Make sure the following SDK prerequisites are installed
+
+* Android Platform SDK 23
+* Android SDK build-tools (latest)
+* Android Support Repository (latest)
 
 ### Building
 ```
