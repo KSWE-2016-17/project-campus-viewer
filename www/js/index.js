@@ -33,13 +33,9 @@ var app = {
   },
 
   init: function(){
-    CameraPreview.startCamera({camera: "back", tapPhoto: false, previewDrag: true, toBack: true});
-    var ref = cordova.InAppBrowser.open('https://kschima.github.io/project-campus/', '_self', 'location=yes');
-
     // onSuccess Callback
     // This method accepts a Position object, which contains the
     // current GPS coordinates
-    // for GPS debug purposes, not used currently
     var onSuccess = function(position) {
         alert('Latitude: '          + position.coords.latitude          + '\n' +
               'Longitude: '         + position.coords.longitude         + '\n' +
@@ -58,7 +54,9 @@ var app = {
               'message: ' + error.message + '\n');
     }
 
-    navigator.geolocation.getCurrentPosition(); // it seems we don't get GPS if not invoked at least once
+    var watchId = navigator.geolocation.watchPosition(onSuccess, onError, { maximumAge: 3000, enableHighAccuracy: true });
+    CameraPreview.startCamera({camera: "back", tapPhoto: false, previewDrag: false, toBack: true});
+    var ref = cordova.InAppBrowser.open('https://kschima.github.io/project-campus/', '_self', 'location=yes');
 
   }
 };
